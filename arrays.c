@@ -14,6 +14,9 @@ static void swap(int *e1, int *e2) {
 void arrSort(int *arr, int arrLength) {
     if(!arr || arrLength <= 0) return;
 
+
+    quickSort(arr, 0, arrLength - 1);
+
     // Bubble sort
     int sweeps = 0;
     for(int i = 0; i < arrLength - 1; i++) {
@@ -90,4 +93,27 @@ void arrPrintWithLimit(int *arr, int arrLength, int limit) {
     }
 
     printf("]\n");
+}
+
+static int binarySearch(int val, int arr[], int start, int end){
+    if (start > end)
+    {
+        return -1;
+    }
+    
+    int mid = (start + end) /2;
+
+    if (arr[mid] = val)
+    {
+        return mid;
+    }else if (arr[mid]> val)
+    {
+        return binarySearch(arr, start, mid - 1, val);
+    }else{
+        return binarySearch(arr, mid + 1, end, val);
+    }
+}
+
+int arrBinarySearch(int *arr, int arrLength, int val) {
+    return binarySearch(arr, 0, arrLength - 1, val);
 }

@@ -68,15 +68,15 @@ Consulte o README se tiver dúvidas sobre a sua utilização.
 
 7. :question: De acordo com os conceitos de *eficiência* e *eficácia*, assinale todas as respostas corretas:
 
-    - [ ] **A)** O Bubble Sort é sempre eficaz, pois ordena corretamente os elementos da lista.  
+    - [x] **A)** O Bubble Sort é sempre eficaz, pois ordena corretamente os elementos da lista.  
 
-    - [ ] **B)** O Quick Sort pode ser ineficiente no pior caso, mas continua sendo eficaz se implementado corretamente.  
+    - [x] **B)** O Quick Sort pode ser ineficiente no pior caso, mas continua sendo eficaz se implementado corretamente.  
 
     - [ ] **C)** A eficiência do Bubble Sort no pior caso é melhor do que a do Quick Sort.  
 
-    - [ ] **D)** O Bubble Sort pode ser otimizado para interromper a execução se a lista já estiver ordenada, reduzindo o número de iterações desnecessárias.  
+    - [x] **D)** O Bubble Sort pode ser otimizado para interromper a execução se a lista já estiver ordenada, reduzindo o número de iterações desnecessárias.  
 
-    - [ ] **E)** O Quick Sort é geralmente mais eficiente que o Bubble Sort devido à sua complexidade média de `O(n log n)`.  
+    - [x] **E)** O Quick Sort é geralmente mais eficiente que o Bubble Sort devido à sua complexidade média de `O(n log n)`.  
 
     - [ ] **F)** O Bubble Sort é mais eficiente que o Quick Sort para grandes volumes de dados.  
 
@@ -102,9 +102,9 @@ Consulte o README se tiver dúvidas sobre a sua utilização.
         IF arr[mid] = val THEN
             RETURN mid
         ELSE IF arr[mid] > val THEN
-            RETURN /* TODO */
+            RETURN binarySearch(arr, start, mid - 1)
         ELSE
-            RETURN /* TODO */
+            RETURN binarySearch(arr, mid + 1, end)
         END IF 
     END
     ```
